@@ -1,5 +1,5 @@
-trigger restrictDuplicateContactsTrigger on SOBJECT (before insert, before update) {
-    if (trigger.before) {
+trigger restrictDuplicateContactsTrigger on Contact (before insert, before update) {
+    if (trigger.isBefore) {
         restrictDuplicateContacts.noDuplicate(trigger.new);
     }
 }
