@@ -2,6 +2,10 @@ public with sharing class restrictDuplicateContacts {
     public restrictDuplicateContacts() {
 
     }
+
+    // Senario
+    // Write a trigger on contact to prevent duplicate records based on Contact Email & Contact Phone.
+
     public static void noDuplicate(List<Contact> listContacts){
         List<String> newEmail = new List<String>();
         List<String> newPhone = new List<String>();

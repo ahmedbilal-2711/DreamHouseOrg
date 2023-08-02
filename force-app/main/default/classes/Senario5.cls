@@ -2,6 +2,10 @@ public with sharing class Senario5 {
     public Senario5() {
 
     }
+
+    // Senario
+    // Write a trigger on Opportunity, when an Opportunity will be insert an Opportunity 
+    // Line Item should be insert by default with any of the Product associated with Opportunity.
     public static void createOpportunityLineItem(List<Opportunity> listOpportunity){
         String setProductId = [SELECT Id FROM Product2 WHERE Name='Lenovo T540p' LIMIT 1].id;
         system.debug('');
