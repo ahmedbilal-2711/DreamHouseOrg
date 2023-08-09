@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <template if:true={relatedContacts}>
+            <lightning-card title="Related Contacts">
+                <lightning-datatable
+                    key-field='Id'
+                    data={relatedContacts}
+                    columns={columns}
+                    hide-checkbox-column
+                    show-row-number-column
+                >
+            </lightning-datatable>
+            </lightning-card>
+        </template>
+        <template if:false={relatedContacts}>
+            No related contacts found.
+        </template>
+    </div>
+</template>
