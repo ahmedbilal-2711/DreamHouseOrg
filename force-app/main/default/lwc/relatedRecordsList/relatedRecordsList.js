@@ -25,17 +25,11 @@ export default class RelatedRecordsDisplay extends LightningElement {
             console.log(error);
         }
     }
-    // get relatedRecords() {
-    //     return this.Account.data.fields[Contact.AccountId].value;
-    // }
 
 
     async handleSave(event) {
         const updatedFields = event.detail.draftValues;
-        // Prepare the record IDs for notifyRecordUpdateAvailable()
-        // const notifyChangeIds = updatedFields.map(row => { return { "recordId": row.Id } });
         try {
-            // Pass edited fields to the updateContacts Apex controller
             const result = await updateContacts({data: updatedFields});
             console.log(JSON.stringify("Apex update result: "+ result));
             this.dispatchEvent(
@@ -66,8 +60,6 @@ export default class RelatedRecordsDisplay extends LightningElement {
             });
             this.dispatchEvent(evt);
     }
- 
-    // This function is used to refresh the table once data updated
     async refresh() {
         await refreshApex(this.wiredContacts);
     }
