@@ -40,7 +40,7 @@ export default class RelatedRecordsDisplay extends LightningElement {
                 })
             );
              this.draftValues = [];
-             document.location.reload(true);
+             document.location.reload(true)
             } catch(error) {
                this.dispatchEvent(
                    new ShowToastEvent({
@@ -48,6 +48,7 @@ export default class RelatedRecordsDisplay extends LightningElement {
                        message: error.body.message,
                        variant: 'error'
                     })
+                    // this.ShowToast()
              );}
     }
 

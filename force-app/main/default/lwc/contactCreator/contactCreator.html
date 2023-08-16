@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Create Contact">
+        <lightning-record-form 
+            object-api-name={objectApiName}
+            density="Compact"
+            fields={fields}
+            onsuccess={handleSuccess}
+            onerror={errorHandler}
+        >
+        </lightning-record-form>
+    </lightning-card>
+</template>
